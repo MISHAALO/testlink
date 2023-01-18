@@ -1,0 +1,16 @@
+TYPE=VIEW
+query=select `test-link`.`executions`.`tcversion_id` AS `tcversion_id`,`test-link`.`executions`.`testplan_id` AS `testplan_id`,max(`test-link`.`executions`.`id`) AS `id` from `test-link`.`executions` group by `test-link`.`executions`.`tcversion_id`,`test-link`.`executions`.`testplan_id`
+md5=74dc0c11448f95933b8b92dc7ca68a47
+updatable=0
+algorithm=0
+definer_user=testlink
+definer_host=%
+suid=2
+with_check_option=0
+timestamp=2022-09-08 11:33:20
+create-version=2
+source=SELECT tcversion_id, testplan_id, MAX(id) AS id \nFROM  executions \nGROUP BY tcversion_id,testplan_id
+client_cs_name=latin1
+connection_cl_name=latin1_swedish_ci
+view_body_utf8=select `test-link`.`executions`.`tcversion_id` AS `tcversion_id`,`test-link`.`executions`.`testplan_id` AS `testplan_id`,max(`test-link`.`executions`.`id`) AS `id` from `test-link`.`executions` group by `test-link`.`executions`.`tcversion_id`,`test-link`.`executions`.`testplan_id`
+mariadb-version=100902
